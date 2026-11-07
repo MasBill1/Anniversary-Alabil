@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 Tahun Kita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="wide">
+<div id="stage">
+  <div id="pg"></div>
+
+  <!-- S0: INTRO -->
+  <section class="scene show on" id="s0" style="background:var(--o)">
+    <div class="stk" style="top:10%;right:9%">✦</div>
+    <div class="stk" style="bottom:9%;left:8%;animation-delay:-2s">❤</div>
+    <span class="pill pop" style="--d:.1s">untuk seseorang yang spesial</span>
+    <h1 class="big pop" style="--d:.3s">Satu tahun<br><mark>kita</mark> ❤</h1>
+    <button id="startBtn" class="pop" style="--d:.6s">▶ Start</button>
+    <div class="opts pop" style="--d:.9s">
+      <button class="chip" id="fV">▯ Vertikal 9:16</button>
+      <button class="chip" id="fW">▭ Layar lebar</button>
+    </div>  </section>
+
+  <!-- S1: SAPAAN -->
+  <section class="scene" id="s1" style="background:var(--o)">
+    <div class="stk" style="top:12%;right:10%">✦</div>
+    <span class="pill pop" style="--d:.2s">Pesan kecil buat kamu</span>
+    <h1 class="big pop" style="--d:.9s">Hai,</h1>
+    <h1 class="nm pop" style="--d:1.7s"><mark class="her"></mark></h1>
+    <p class="mid pop" style="--d:3.2s">Aku punya sesuatu<br>buat kamu hari ini.</p>
+    <div class="tape"><div class="tp"></div></div>
+  </section>
+
+  <!-- S2: WAKTU -->
+  <section class="scene" id="s2" style="background:var(--c)">
+    <div class="stk" style="bottom:9%;left:7%">❤</div>
+    <div class="stk" style="top:9%;right:8%;animation-delay:-3s">★</div>
+    <span class="pill pop" style="--d:.2s">sejak <span id="since"></span></span>
+    <p class="mid pop" style="--d:.7s">Hari ini kita sudah bersama selama</p>
+    <div class="num pop" style="--d:1.2s"><b id="cd">0</b><span>hari</span></div>
+    <div class="stats pop" style="--d:1.9s">
+      <div class="stat"><b id="ch">0</b><span>jam</span></div>
+      <div class="stat"><b id="cm">0</b><span>menit</span></div>
+      <div class="stat"><b id="cs">0</b><span>detik</span></div>
+    </div>
+  </section>
+
+  <!-- S3: GALERI -->
+  <section class="scene" id="s3" style="background:var(--d)">
+    <div class="head pop" style="--d:.1s"><span class="pill" style="background:var(--l);color:var(--k)">Galeri kita</span><span class="pill" id="rc" style="background:#fff;color:var(--k)">01/01</span></div>
+    <div class="reel" id="reel"></div>
+    <p class="cap" id="rcap"></p>
+  </section>
+
+  <!-- S4: PERJALANAN -->
+  <section class="scene" id="s4" style="background:var(--p)">
+    <div class="stk" style="bottom:6%;right:6%">✿</div>
+    <span class="pill pop" style="--d:.1s">Perjalanan kita</span>
+    <h2 class="h2 pop" style="--d:.3s">Momen yang <mark>nggak</mark> kulupa</h2>
+    <div class="tlv" id="tlv"></div>
+  </section>
+
+  <!-- S5: ALASAN -->
+  <section class="scene" id="s5" style="background:var(--l)">
+    <div class="stk" style="top:10%;left:8%">✦</div>
+    <div class="stk" style="bottom:8%;right:8%;animation-delay:-2s">❤</div>
+    <span class="pill pop" style="--d:.2s">Alasan aku sayang kamu</span>
+    <div class="rbox pop" style="--d:.7s"><div class="rn" id="rn">#1</div><div class="rt" id="rt"></div></div>
+  </section>
+
+  <!-- S6: SURAT -->
+  <section class="scene" id="s6" style="background:var(--p)">
+    <span class="pill pop" style="--d:.2s">Surat kecil</span>
+    <h2 class="h2 pop" style="--d:.5s">Untuk <mark class="her"></mark></h2>
+    <div class="paper pop" style="--d:.9s"><div id="txt"><span class="on"></span><span class="off"></span></div></div>
+  </section>
+
+  <!-- S7: FINAL -->
+  <section class="scene" id="s7" style="background:var(--o)">
+    <canvas id="fw"></canvas>
+    <div class="tape t2"><div class="tp"></div></div>
+    <span class="pill pop" style="--d:.3s">Selamat anniversary</span>
+    <div class="year"><span class="y1 pop" style="--d:.8s">1</span><span class="y2 pop" style="--d:1.2s">TAHUN</span></div>
+    <h2 class="h2 pop" style="--d:2s">Aku sayang kamu,<br><mark class="her"></mark> ❤</h2>
+    <p class="mid pop" style="--d:2.8s">— <span class="me"></span></p>
+  </section>
+
+  <div id="wipe"><i class="w1"></i><i class="w2"></i></div>
+  <button class="chip" id="replay">↻ Ulangi</button>
+  <div id="ctl">
+    <button class="chip" id="bprev" aria-label="Sebelumnya">‹</button>
+    <button class="chip" id="pbtn" aria-label="Jeda">❚❚</button>
+    <button class="chip" id="bnext" aria-label="Berikutnya">›</button>
+  </div>
+</div>
+<audio id="bgm" loop preload="auto"></audio>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
